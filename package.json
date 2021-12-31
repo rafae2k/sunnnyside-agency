@@ -1,0 +1,48 @@
+{
+  "name": "sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "rafae2k <53544360+rafae2k@users.noreply.github.com>",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prepare": "yarn husky install && yarn husky add .husky/commit-msg 'yarn commitlint --edit $1' && yarn husky add .husky/pre-commit 'yarn lint-staged' && yarn husky add .husky/prepare-commit-msg 'exec < /dev/tty && yarn cz --hook || true' && echo \"module.exports = {extends: ['@commitlint/config-conventional']}\" > commitlint.config.js",
+    "test": "jest",
+    "tailwind-start": "yarn tailwindcss -i ./src/main.css -o ./public/style.css --watch",
+    "build": "cp -r ./src/{index.html,script.js} ./public"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint",
+      "cross-env CI=true yarn test --bail --findRelatedTests"
+    ],
+    "*.css": [
+      "stylelint **/*.css"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/jest": "^27.0.3",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.3.2",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "lint-staged": "^12.1.4",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0",
+    "tailwindcss": "^3.0.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
