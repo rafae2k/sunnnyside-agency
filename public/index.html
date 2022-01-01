@@ -5,15 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FONTS -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- STYLE -->
 
     <link rel="stylesheet" href="/public/style.css" />
@@ -26,7 +17,7 @@
   </head>
 
   <body class="h-screen w-screen">
-    <header class="w-screen fixed z-10 flex justify-between pt-4 px-5">
+    <header class="w-screen fixed z-10 flex justify-between pt-3 px-5">
       <div class="logo">
         <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -36,7 +27,7 @@
           />
         </svg>
       </div>
-      <i class="menu-icon cursor-pointer">
+      <i class="menu-icon">
         <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
@@ -45,51 +36,11 @@
           />
         </svg>
       </i>
-      <nav
-        class="
-          show
-          flex flex-col
-          items-center
-          justify-center
-          w-full
-          py-7
-          mx-5
-          bg-white
-          absolute
-          top-0
-          left-0
-          gap-4
-          rounded
-        "
-        id="menu"
-      >
-        <a
-          href="#about"
-          class="text-slate-400 transition-colors hover:text-yellow-400"
-          >About</a
-        >
-        <a
-          href="#services"
-          class="text-slate-400 transition-colors hover:text-orange-500"
-          >Services</a
-        >
-        <a
-          href="#projects"
-          class="text-slate-400 transition-colors hover:text-rose-600"
-          >Projects</a
-        >
-        <a
-          href="#contact"
-          class="
-            bg-primary-yellow
-            text-black
-            py-2
-            px-6
-            rounded-full
-            font-heading font-bold
-          "
-          >Contact</a
-        >
+      <nav class="flex flex-col w-full show bg-white absolute top-10" id="menu">
+        <a href="#about" class="bg-red">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
     <main>
@@ -102,20 +53,6 @@
           <img src="/public/images/image-header.jpg" alt="" />
         </picture>
         <h1>We are creatives</h1>
-        <div>
-          <svg width="36" height="114" xmlns="http://www.w3.org/2000/svg">
-            <g
-              stroke="#FFF"
-              stroke-width="6"
-              fill="none"
-              fill-rule="evenodd"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M18 3v100M3 95.484l15 15 15-15" />
-            </g>
-          </svg>
-        </div>
       </section>
 
       <section id="about-1" class="flex">
