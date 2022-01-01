@@ -20,12 +20,12 @@
 
     <!-- SCRIPT -->
 
-    <script src="/public/script.js" defer></script>
+    <script src="/public/script.js" defer ></script>
 
     <title>Sunnyside Agency</title>
   </head>
 
-  <body class="h-screen w-screen">
+  <body class="h-screen w-screen scroll-smooth">
     <header class="w-screen fixed z-10 flex justify-between pt-4 px-5">
       <div class="logo">
         <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,6 @@
       </i>
       <nav
         class="
-          show
           flex flex-col
           items-center
           justify-center
@@ -94,15 +93,29 @@
     </header>
     <main>
       <section id="#home" class="">
-        <picture class="top-0 left-0">
+        <picture class="relative">
           <source
             media="(min-width: 800px)"
             srcset="/public/images/image-header-2x.jpg"
           />
           <img src="/public/images/image-header.jpg" alt="" />
         </picture>
-        <h1>We are creatives</h1>
-        <div>
+        <div
+          class="
+            flex flex-col
+            items-center
+            gap-8
+            heading
+            absolute
+            top-[7rem]
+            left-0
+          "
+        >
+          <h1
+            class="font-heading text-4xl text-center text-white tracking-widest"
+          >
+            WE ARE CREATIVES
+          </h1>
           <svg width="36" height="114" xmlns="http://www.w3.org/2000/svg">
             <g
               stroke="#FFF"
@@ -118,26 +131,30 @@
         </div>
       </section>
 
-      <section id="about-1" class="flex">
-        <picture>
+      <section id="about-1" class="lg:flex ">
+        <picture class="lg:order-2 lg:min-w-fit">
           <source
             media="(min-width: 800px)"
             srcset="/public/images/image-transform-2x.jpg"
           />
           <img src="/public/images/image-transform.jpg" alt="" />
         </picture>
-        <div class="content">
-          <h2>Transform your brand</h2>
-          <p>
+        <div class="content text-center py-10 px-5 flex flex-col gap-3 order-1 justify-center items-center">
+          <h2 class="font-heading text-4xl">Transform your brand</h2>
+          <p class="text-slate-400">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
           </p>
-          <a href="#">Learn more</a>
-        </div>
+          <a href="#">
+            <p class="inline font-heading after:content-['LEARN MORE'] after:w-[110%] relative  after:bg-primary-yellow/50 after:h-1.5 after:rounded-full after:absolute after:bottom-0.5 after:-left-1 after:-z-10 hover:after:rounded-full hover:after:scale-105 hover:after:h-2 after:transition-all hover:after:bg-primary-yellow/60
+            ">
+              LEARN MORE
+            </p>
+          </a>
       </section>
 
-      <section id="about-2">
+      <section id="about-2" class="lg:flex">
         <picture>
           <source
             media="(min-width: 800px)"
@@ -145,14 +162,19 @@
           />
           <img src="/public/images/image-stand-out.jpg" alt="" />
         </picture>
-        <div class="content">
-          <h2>Stand out to the right audience</h2>
-          <p>
+        <div class="content text-center py-10 px-5 flex flex-col gap-3">
+          <h2 class="font-heading text-4xl">Stand out to the right audience</h2>
+          <p class="text-slate-400">
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we'll build and
             extend your brand in digital places.
           </p>
-          <a href="#">Learn more</a>
+          <a href="#">
+            <p class="inline font-heading after:content-['LEARN MORE'] after:w-[110%] relative  after:bg-rose-600/30 after:h-1.5 after:rounded-full after:absolute after:bottom-0.5 after:-left-1 after:-z-10 hover:after:rounded-full hover:after:scale-105 hover:after:h-2 after:transition-all hover:after:bg-rose-600/60
+            ">
+              LEARN MORE
+            </p>
+          </a>
         </div>
       </section>
 
