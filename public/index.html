@@ -101,14 +101,13 @@
           <img src="/public/images/image-header.jpg" alt="" />
         </picture>
         <div
-          class="
-            flex flex-col
-            items-center
+          class="place-items-center grid
             gap-8
-            heading
+            top-1/2
+            left-1/2
+            -translate-x-1/2
+            -translate-y-1/2
             absolute
-            top-[7rem]
-            left-0
           "
         >
           <h1
@@ -132,7 +131,7 @@
       </section>
 
       <section id="about-1" class="lg:flex ">
-        <picture class="lg:order-2 lg:min-w-fit">
+        <picture class="lg:order-2 min-w-fit">
           <source
             media="(min-width: 800px)"
             srcset="/public/images/image-transform-2x.jpg"
@@ -154,15 +153,15 @@
           </a>
       </section>
 
-      <section id="about-2" class="lg:flex">
-        <picture>
+      <section id="about-2" class="lg:flex lg:flex-wrap">
+        <picture class="lg:order-1 basis-1/2">
           <source
             media="(min-width: 800px)"
             srcset="/public/images/image-stand-out-2x.jpg"
           />
           <img src="/public/images/image-stand-out.jpg" alt="" />
         </picture>
-        <div class="content text-center py-10 px-5 flex flex-col gap-3">
+        <div class="content text-center py-10 px-5 flex flex-col gap-3 order-2 justify-center items-center basis-1/2">
           <h2 class="font-heading text-4xl">Stand out to the right audience</h2>
           <p class="text-slate-400">
             Using a collaborative formula of designers, researchers,
@@ -217,9 +216,9 @@
       <section id="testimonials">
         <h2>Client testimonials</h2>
 
-        <div class="content">
+        <div class="content bg-red-600">
           <div class="client">
-            <img src="/public/images/image-emily.jpg" alt="" />
+            <img src="/public/images/image-emily.jpg" alt="" class=""/>
             <p>
               We put our trust in Sunnyside and they delivered, making sure our
               needs were met and deadlines were always hit.
